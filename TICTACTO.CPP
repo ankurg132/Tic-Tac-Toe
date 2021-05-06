@@ -1,6 +1,7 @@
 //Program to play tic tac toe
-#include<iostream.h>
-#include<conio.h>
+#include <iostream>
+#include <conio.h>
+using namespace std;
 int startfile();  //function used for menu
 int game();          //function where game is initiated
 void asterisk();     //just used for designing
@@ -13,15 +14,15 @@ void aboutgame();         //used to display info about game
 void credits();        //used to display the credits
 int i;
 char square[9]={'1','2','3','4','5','6','7','8','9'};
-void main(){
+int  main(){
 	int y;
-	clrscr();
+	system("cls");
 	startfile();
 	getch();
 }
 int startfile(){
 	asterisk();
-	clrscr();
+	system("cls");
 	cout<<"\t\t\t\tWelcome to Tic Tac Toe game"<<endl;
 	int choice;
 	asterisk();
@@ -38,7 +39,7 @@ int startfile(){
 	return choice;
 }
 int game(){
-	clrscr();
+	system("cls");
 	int player;
 	do
 	{
@@ -88,7 +89,7 @@ int game(){
 	return 0;
 	}
 void start(){
-	clrscr();
+	system("cls");
 	cout<<"Let's play:\n ";
 	asterisk();
 	cout << "  " << square[0] << "  |  " << square[1] << "  |  " << square[2] << endl;
@@ -103,6 +104,8 @@ void start(){
 void asterisk(){
 	for(int i=0;i<79;i++)
 		cout<<"*";
+		cout<<endl;
+		cout<<endl;
 		}
 int checkwin(){
 	if (square[0] == square[1] && square[1] == square[2])
@@ -129,7 +132,7 @@ int checkwin(){
 		return -1;
 }
 void help(){
-	clrscr();
+	system("cls");
 	cout<<"So, what you want to know?"<<endl;
 	asterisk();
 	cout<<"\n1.How to play..\n2.Rules\n3.About the game\n4.Credits\n5.exit";
@@ -147,7 +150,7 @@ void help(){
 			}
 		}
 void howtoplay(){
-	clrscr();
+	system("cls");
 	int c2;
 	cout<<"The game is played as follows:"<<endl;
 	asterisk();
@@ -170,7 +173,7 @@ void howtoplay(){
 	}
 
 void gamerule(){
-	clrscr();
+	system("cls");
 	int c1;
 	cout<<"GAME RULES:"<<endl;
 	asterisk();
@@ -187,7 +190,7 @@ void gamerule(){
 		}
 	}
 void aboutgame(){
-    clrscr();
+    system("cls");
     cout<<"ABOUT THE GAME:"<<endl;
     asterisk();
     cout<<"\nTic-tac-toe (also known as noughts and crosses or Xs and Os) is a multi - player computer game for two players, X and O, who take turns marking the spaces in a 3*3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game";
@@ -198,7 +201,7 @@ void aboutgame(){
     startfile();
     }
 void credits(){
-    clrscr();
+    system("cls");
     cout<<"CREDITS"<<endl;
     asterisk();
     cout<<"\nThis game is made by Ankur Gupta of class 11th science. Thanks for using the game..."<<endl;
